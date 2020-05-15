@@ -9,13 +9,13 @@ int main()
 
 
 
-  singlyLinkedListNode* temporary = dictionaryAPI.Add(myDictionary, "Hello World!\n", 5);
+  singlyLinkedListNode* temporary = dictionaryAPI.Add(myDictionary, "Natalie", 5);
   printf("%s\n", dictionaryAPI.ToString(myDictionary));
 
-  temporary = dictionaryAPI.Add(myDictionary, "Hello World!\n", 10);
+  temporary = dictionaryAPI.Add(myDictionary, "Sara", 10);
   printf("%s\n", dictionaryAPI.ToString(myDictionary));
 
-  temporary = dictionaryAPI.Add(myDictionary, "Hello World!\n", 1);
+  temporary = dictionaryAPI.Add(myDictionary, "Mpho", 1);
   printf("%s\n", dictionaryAPI.ToString(myDictionary));
 
 }
