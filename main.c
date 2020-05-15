@@ -14,6 +14,9 @@ int main()
 
   temporary = dictionaryAPI.Add(myDictionary, "Sara", 10);
   printf("%s\n", dictionaryAPI.ToString(myDictionary));
+  temporary = dictionaryAPI.Add(myDictionary, "Sara", 1);
+  temporary = dictionaryAPI.Add(myDictionary, "Sara", 19);
+  printf("%s\n", dictionaryAPI.ToString(myDictionary));
 
   temporary = dictionaryAPI.Add(myDictionary, "Mpho", 1);
   printf("%s\n", dictionaryAPI.ToString(myDictionary));
