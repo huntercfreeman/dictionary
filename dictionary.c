@@ -1,4 +1,5 @@
 #include "dictionary.h"
+#include "stringBuilder.h"
 #include <stdlib.h>
 #include <stdio.h>
 
@@ -32,7 +33,22 @@ static singlyLinkedListNode* Add(dictionaryStruct* dictionary, char* key, int va
   return temporary;
 }
 
+static char* ToString(dictionaryStruct* dictionary)
+{
+  if(dictionary == NULL) return "";
+
+  stringBuilder* stringBuilder = stringBuilderAPI.Constructor();
+
+  for(int i = 0; i < DICTIONARY_SIZE; i++)
+  {
+    singlyLinkedListNode* temporary = dictionary->map[i];
+    stringBuilderAPI.AppendChars(stringBuilder, singlyLinkedListAPI.ToString(temporary));
+  }
+
+  return stringBuilder->string;
+}
+
 dictionaryAPIStruct const dictionaryAPI =
 {
-  Add, MapKey
+  Add, MapKey, ToString
 };

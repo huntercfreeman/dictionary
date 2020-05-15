@@ -15,6 +15,7 @@ typedef struct {
 typedef struct dictionaryAPIStruct {
   singlyLinkedListNode* (* const Add)(dictionaryStruct* dictionary, char* key, int value);
   unsigned int (* const MapKey)(dictionaryStruct* dictionary, char* key);
+  char* (* const ToString)(dictionaryStruct* dictionary);
 } dictionaryAPIStruct;
 
 dictionaryAPIStruct const dictionaryAPI;
