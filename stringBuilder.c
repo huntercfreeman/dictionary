@@ -27,7 +27,7 @@ static stringBuilder* AppendChars(stringBuilder *stringBuilder, char* value)
     stringBuilder->string = (char*)realloc(stringBuilder->string, stringBuilder->capacity);
   }
 
-  snprintf(stringBuilder->string + stringBuilder->length, remainingSpace, "%s", value);
+  snprintf(stringBuilder->string + stringBuilder->length, remainingSpace + stringBuilder->length, "%s", value);
   stringBuilder->length += argumentLength;
 
   return stringBuilder;
@@ -58,7 +58,7 @@ static stringBuilder* AppendInt(stringBuilder *stringBuilder, int value)
     stringBuilder->string = (char*)realloc(stringBuilder->string, stringBuilder->capacity);
   }
 
-  snprintf(stringBuilder->string + stringBuilder->length, remainingSpace, "%d", value);
+  snprintf(stringBuilder->string + stringBuilder->length, remainingSpace + stringBuilder->length, "%d", value);
   stringBuilder->length += argumentLength;
 
   return stringBuilder;
